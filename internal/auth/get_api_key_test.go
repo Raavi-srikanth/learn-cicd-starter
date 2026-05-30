@@ -22,7 +22,7 @@ func TestGetAPIKey(t *testing.T) {
 			headers: http.Header{
 				"Authorization": []string{"ApiKey secret_token_12345"},
 			},
-			expectedKey:   "WRONG_TOKEN_SABOTAGE",
+			expectedKey:   "secret_token_12345",
 			expectedError: nil,
 		},
 		{
